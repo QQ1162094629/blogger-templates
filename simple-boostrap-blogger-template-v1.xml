@@ -62,9 +62,18 @@ Date:     9 Sept 2016
 */
 
 /** Reset **/
-*{margin:0; padding:0;}
-ul,ol{margin:0 0 0 40px;}
-#navbar-iframe, .status-msg-wrap, .quickedit, .feed-links {display: none;}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul,ol {
+  margin: 0 0 0 40px;
+}
+
+#navbar-iframe, .status-msg-wrap, .quickedit, .feed-links {
+  display: none;
+}
 
 /* Use this with templates/template-twocol.html */
 body {
@@ -152,26 +161,28 @@ a img {
   word-wrap: break-word;
  /* fix for long text breaking sidebar float in IE */
   overflow: hidden;
-     /* fix for long non-text content breaking IE sidebar float */;
+     /* fix for long non-text content breaking IE sidebar float */
+  ;
 }
 
 #sidebar-wrapper {
-    color: #000000;
-    border: 1px solid #ccc;
+  color: #000000;
+  border: 1px solid #ccc;
   color: $sidebartextcolor;
   word-wrap: break-word;
  /* fix for long text breaking sidebar float in IE */
   overflow: hidden;
-      /* fix for long non-text content breaking IE sidebar float */;
+      /* fix for long non-text content breaking IE sidebar float */
+  ;
 }
 
 #sidebar-wrapper h2 {
-    margin: 0;
-    font-size: 22px;
-    background: #f8f8f8;
-    padding: 8px;
-    color: #333;
-    font-weight: normal;
+  margin: 0;
+  font-size: 22px;
+  background: #f8f8f8;
+  padding: 8px;
+  color: #333;
+  font-weight: normal;
 }
 
 /** Headings **/
