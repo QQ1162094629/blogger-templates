@@ -14,9 +14,9 @@
 -----------------------------------------------
 Blogger Template Style
 Name:     Blogger Framework
-Designer: Choen
-URL:      http://deconstructioncode.blogspot.com/
-Date:     06 Des 2009
+Designer: Dhany Nurdiansyah
+URL:      https://github.com/dhanyn10/blogger-templates
+Date:     9 Sept 2016
 ----------------------------------------------- */
 
 /* Variable definitions
@@ -1184,7 +1184,7 @@ pre code {
     </div>
 
 <div id='info'><div id='siteinfo'>
-&#169; 2009 <a href='/'><data:blog.title/></a> |
+&#169; 2016 <a href='/'><data:blog.title/></a> |
 Powered by
 <a href='http://blogger.com/' rel='generator'>Blogger</a>
 </div></div>
