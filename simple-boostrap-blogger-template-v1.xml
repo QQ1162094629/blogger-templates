@@ -3,6 +3,28 @@
 <html expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
     <head>
         <b:include data='blog' name='all-head-content'/>
+		<meta charset='utf-8'/>
+		<link href='http://xxx' rel='canonical'/>
+		<b:if cond='data:blog.pageType == &quot;index&quot;'> <title><data:blog.pageTitle/> DESKRIPSI SINGKAT BLOG </title> <b:else/><title><data:blog.pageName/> | <data:blog.title/></title>
+		</b:if>
+		<meta content='Description Blog Anda' name='description'/>
+		<meta content='keyword1,keyword2,keyword3' name='keywords'/>
+		<meta content='index, follow' name='robots'/>
+		<meta content='Kode Verifikasi Google' name='google-site-verification'/>
+		<meta content='Kode Verifikasi Bing' name='msvalidate.01'/>
+		<meta content='Kode Verifikasi Alexa' name='alexaVerifyID'/>
+		<meta content='2 days' name='revisit-after'/>
+		<meta content='general' name='rating'/>
+		<meta content='id' name='geo.country'/>
+		<meta content='Indonesia' name='geo.placename'/>
+		<meta content='Nama Author' name='author'/>
+		<meta content='all' name='Slurp'/>
+		<meta content='width=device-width' name='viewport'/>
+		<link href='http://xxx/favicon.ico' rel='icon' type='image/x-icon'/>
+		<link href='http://xxx/atom.xml' rel='alternate' title='Atom' type='application/atom+xml'/>
+		<link href='http://xxx/feeds/posts/default' rel='alternate' title='RSS Feeds' type='application/atom+xml'/>
+		<link href='http://draft.blogger.com/openid-server.g' rel='openid.server'/>
+		<link href='xxx' rel='openid.delegate'/>
 
         <b:if cond='data:blog.pageType == &quot;index&quot;'>
         <title><data:blog.title/></title>
