@@ -1276,7 +1276,7 @@ pre code {
 	<div id='footer-wrapper' class="container">
 		<b:section class='footer' id='footer'/>
 	</div>
-	<div id='info'>
+	<div id='info' class="container">
 		<div id='siteinfo'> &#169; 2016 <a href='/'><data:blog.title/></a> | Powered by <a href='http://blogger.com/' rel='generator'>Blogger</a></div>
 	</div>
     </div> <!-- end outer-wrapper -->
