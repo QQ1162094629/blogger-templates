@@ -787,6 +787,9 @@ pre code {
             </div>
         </div>
     </div>
+	<b:if cond='data:blog.pageType == "item"'>
+		<div id="iklan-post-bawah" class="container-fluid" style="display:block;height:40px;background:#ddd;"></div>
+	</b:if>
 </b:includable>
 <b:includable id='commentDeleteIcon' var='comment'>
     <span expr:class='&quot;item-control &quot; + data:comment.adminClass'>
