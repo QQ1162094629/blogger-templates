@@ -142,7 +142,7 @@ a img {
     letter-spacing: .1em;
     font: normal normal 300% Georgia, Serif;
     word-wrap: break-word;
-    font: $pagetitlefont;
+    font: normal normal 150% Georgia, Serif;
 }
 
 #header a {
@@ -156,7 +156,7 @@ a img {
 
 #header .description {
     color: #666666;
-    font-size: 14px;
+    font-size: 12px;
     font-style: italic;
     letter-spacing: .2em;
 }
@@ -165,7 +165,9 @@ a img {
     margin-$startSide: auto;
     margin-$endSide: auto;
 }
-
+#iklan{
+	overflow:hidden;
+}
 /** Outer-Wrapper **/
 #outer-wrapper {
     text-align: $startSide;
@@ -470,7 +472,6 @@ pre code {
 
 /** Footer **/
 #footer {
-    width: 940px;
     clear: both;
     margin: 10px auto;
     line-height: 1.6em;
@@ -485,7 +486,6 @@ pre code {
 
 #siteinfo {
     font-size: 11px;
-    width: 940px;
     padding: 10px;
     margin: 5px auto;
 }
