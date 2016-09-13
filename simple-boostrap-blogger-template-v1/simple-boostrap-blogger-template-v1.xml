@@ -496,7 +496,7 @@ pre code {
     </head>
 
     <body>
-    <div id='outer-wrapper'><div id='wrap2'>
+    <div id='outer-wrapper'>
 
         <!-- skip links for text browsers -->
         <span id='skiplinks' style='display:none;'>
@@ -1273,18 +1273,13 @@ pre code {
 
         </div> <!-- end content-wrapper -->
 
-        <div id='footer-wrapper'>
-            <b:section class='footer' id='footer'/>
-        </div>
-
-<div id='info'><div id='siteinfo'>
-&#169; 2016 <a href='/'><data:blog.title/></a> |
-Powered by
-<a href='http://blogger.com/' rel='generator'>Blogger</a>
-</div></div>
-
-    </div></div> <!-- end outer-wrapper -->
-    
+	<div id='footer-wrapper' class="container">
+		<b:section class='footer' id='footer'/>
+	</div>
+	<div id='info'>
+		<div id='siteinfo'> &#169; 2016 <a href='/'><data:blog.title/></a> | Powered by <a href='http://blogger.com/' rel='generator'>Blogger</a></div>
+	</div>
+    </div> <!-- end outer-wrapper -->
 <script src='http://dhanyn10.github.io/data/bootstrap/js/bootstrap.min.js'/>
 </body>
 </html>
