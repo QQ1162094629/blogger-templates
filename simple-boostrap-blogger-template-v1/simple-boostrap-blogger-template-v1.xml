@@ -314,24 +314,6 @@ h2 {
 }
 
 /** Code **/
-code {
-    line-height: 1.3em;
-    border: 1px solid #ccc;
-    padding: 0 0.2em;
-    ;
-    font-family: Monaco,Monospace;
-}
-
-pre code {
-    line-height: 1.3em;
-    border: 1px solid #ccc;
-    display: block;
-    width: 550px;
-    margin: 5px 20px;
-    padding: 5px 10px;
-    font-family: Monaco,Monospace;
-    color: #666;
-}
 
 /** Comments **/
 #comments h4 {
