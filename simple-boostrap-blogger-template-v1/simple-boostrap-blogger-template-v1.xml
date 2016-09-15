@@ -314,6 +314,9 @@ h2 {
 }
 
 /** Code **/
+pre code{
+	white-space:none;
+}
 
 /** Comments **/
 #comments h4 {
