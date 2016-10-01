@@ -25,7 +25,18 @@
 		<link href='http://xxx/feeds/posts/default' rel='alternate' title='RSS Feeds' type='application/atom+xml'/>
 		<link href='http://draft.blogger.com/openid-server.g' rel='openid.server'/>
 		<link href='xxx' rel='openid.delegate'/>
+        <meta expr:content='data:blog.pageTitle' property='og:title'/>
+        <meta content='website' property='og:type'/>
+        <meta expr:content='data:blog.canonicalUrl' property='og:url'/>
 
+        <!-- Force sharing widget to show the image from post -->
+        <b:if cond='data:blog.postImageThumbnailUrl'>
+          <meta expr:content='data:blog.postImageThumbnailUrl' property='og:image'/>
+        <b:else/>
+          <meta content='http://dhanyn10.github.io/data/noimage.gif' property='og:image'/>
+        </b:if>
+        <meta expr:content='data:blog.title' property='og:site_name'/>
+        <meta expr:content='data:blog.metaDescription' property='og:description'/>
         <b:if cond='data:blog.pageType == &quot;index&quot;'>
         <title><data:blog.title/></title>
         <b:else/>
