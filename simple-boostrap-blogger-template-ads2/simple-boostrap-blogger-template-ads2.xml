@@ -42,7 +42,7 @@
         <b:else/>
         <title><data:blog.pageName/> | <data:blog.title/></title>
         </b:if>
-
+        <link href="http://dhanyn10.github.io/data/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
         <b:skin><![CDATA[/*
 -----------------------------------------------
 Blogger Template Style
@@ -486,8 +486,6 @@ pre code{
     margin: 5px auto;
 }
 ]]></b:skin>
-
-    <link href="http://dhanyn10.github.io/data/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
         <script src='http://dhanyn10.github.io/data/js/jquery.min.js'></script>
     </head>
 
