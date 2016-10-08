@@ -177,7 +177,7 @@ a img {
     margin-$startSide: auto;
     margin-$endSide: auto;
 }
-#iklan{
+.iklan{
 	overflow:hidden;
 }
 /** Outer-Wrapper **/
@@ -557,7 +557,7 @@ pre code{
 </b:widget>
 </b:section>
         </div>
-    <b:section id="iklan" class="col-sm-8" showaddelement="yes" maxwidgets="1"></b:section>
+    <b:section id="iklan" class="col-sm-8 iklan" showaddelement="yes" maxwidgets="1"></b:section>
 </div>
 <div class='container'>
 <nav class="navbar navbar-default">
