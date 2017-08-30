@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <b:include data='blog' name='all-head-content'/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"/>
+        <style>
+            body{
+                background: #ecf0f1;
+            }
+            .judul{
+                background: #95a5a6;
+                height: 150px;
+            }
+            .judul h1{
+                line-height: 150px;
+            }
+            .konten{
+                margin-top: 40px;
+            }
+            .posting{
+                margin-bottom: 10px;
+            }
+        </style>
+        <title>
+            Judul Blogger
+        </title>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-md navbar-light bg-light">
+            <div class="container">
+                <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#navbar-blogger"
+                        aria-controls="navbar-blogger"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar-blogger">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="">Beranda</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="">Informasi</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="">Tentang</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="judul">
+            <div class="container">
+                <h1>Judul</h1>
+            </div>
+        </div>
+        <div class="container konten">
+            <div class="row">
+                <div class="col-sm-8">
+                    <div class="card posting">
+                        <div class="card-body">
+                            <div class="card-text">
+                                <p>Ditulis oleh : author | dalam Label</p>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h3>Judul Posting</h3>
+                                    </div>
+                                    <div class="col-6">
+                                    <img class="img-thumbnail" src="img/300x150.gif"/>
+                                    </div>
+                                    <div class="col-6">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                        Curabitur fermentum eget nulla aliquet posuere. 
+                                        Pellentesque finibus nisl dolor, ut maximus nulla molestie sed. 
+                                        Proin ac orci sit amet augue consequat.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+    </body>
+</html>
