@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<HTML expr:class='data:blog.languageDirection + &quot; no-js rwd&quot;' expr:dir='data:blog.languageDirection'>
+    <head>
+        <meta charset='utf-8'/>
+        <b:if cond='data:blog.url == data:blog.homepageUrl'><link href='https://plus.google.com/ID_G-pluss' rel='author'/></b:if>
+        <b:if cond='data:blog.pageType == &quot;index&quot;'>
+            <title>
+                <data:blog.pageTitle/>
+            </title>
+            <b:else/>
+            <b:if cond='data:blog.pageType == &quot;error_page&quot;'>
+                <title>404: Page Not Found ~ <data:blog.title/></title>
+                <b:else/>
+                <title>
+                    <data:blog.pageName/> ~ <data:blog.title/>
+                </title>
+            </b:if>
+        </b:if>
+        <meta content='width=device-width, initial-scale=1, maximum-scale=1' name='viewport'/>
+        <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+        <meta content='blogger' name='generator'/>
+        <link expr:href='data:blog.homepageUrl + &quot;favicon.ico&quot;' rel='icon' type='image/x-icon'/>
+        <link expr:href='data:blog.url' rel='canonical'/>
+        <link expr:href='data:blog.homepageUrl + &quot;feeds/posts/default&quot;' expr:title='data:blog.title + &quot; - Atom&quot;' rel='alternate' type='application/atom+xml'/>
+        <link expr:href='data:blog.homepageUrl + &quot;feeds/posts/default?alt=rss&quot;' expr:title='data:blog.title + &quot; - RSS&quot;' rel='alternate' type='application/rss+xml'/>
+        <link expr:href='&quot;http://www.blogger.com/feeds/&quot; + data:blog.blogId + &quot;/posts/default&quot;' expr:title='data:blog.title + &quot; - Atom&quot;' rel='alternate' type='application/atom+xml'/>
+        <link href='http://www.blogger.com/openid-server.g' rel='openid.server'/>
+        <link expr:href='data:blog.homepageUrl' rel='openid.delegate'/>
+        <b:if cond='data:blog.pageType == &quot;item&quot;'>
+            <b:if cond='data:blog.postImageThumbnailUrl'>
+                <link expr:href='data:blog.postImageThumbnailUrl' rel='image_src'/>
+            </b:if>
+            <b:if cond='data:blog.metaDescription != &quot;&quot;'>
+                <meta expr:content='data:blog.metaDescription' name='description'/>
+                <b:else/>
+                <meta expr:content='data:blog.pageName + &quot; - &quot; + data:blog.title' name='description'/>
+            </b:if>
+        </b:if>
+        <b:if cond='data:blog.url == data:blog.homepageUrl'>
+            <meta content='Deskripsi - Blog' name='description'/>
+            <meta content='Keyword blog' name='keywords'/>
+        </b:if>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"/>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        &lt;style type=&quot;text/css&quot;&gt;&lt;!-- /* <b:skin><![CDATA[
+<!--        Disini nantinya akan di isi CSS untuk Layout Tata Letak-->
+        */]]></b:skin>
+        <style type='text/css'>
+            #outer-wrapper{
+                background: #ecf0f1;
+            }
+            #header{
+                background: #95a5a6;
+                height: 150px;
+            }
+            #header h1{
+                line-height: 150px;
+            }
+            #main{
+                margin-top: 40px;
+            }
+            #konten{
+                margin-bottom: 10px;
+            }
+            #main-wrapper{
+                margin-top:-40px;
+            }
+            .post-outer,
+            .sidebar h2{
+                border-bottom: 1px solid rgba(0,0,0,.125);
+                margin-bottom: 10px;
+                padding-bottom: 10px;
+            }
+            .sidebar h2{
+                font-size:1.2rem;
+            }
+            .popular-posts ul{
+                list-style:none;
+                padding:0;
+            }
+            .post-title a,
+            .popular-posts .item-title a{
+                color:black;
+                text-decoration:none;
+            }
+            .post-body img{
+                box-sizing: border-box !important;
+                height: auto !important;
+                max-width: 100% !important
+            }
+        </style>
+    </head>
+    <body expr:class='data:blog.pageType' itemscope='itemscope' itemtype='http://schema.org/WebPage'>
+        <div id='outer-wrapper'>
+            <!-- Disini posisi elemen outer-wrapper -->
+            <nav class="navbar navbar-expand-md navbar-light bg-light">
+                <div class="container">
+                    <button
+                            class="navbar-toggler"
+                            type="button"
+                            data-toggle="collapse"
+                            data-target="#navbar-blogger"
+                            aria-controls="navbar-blogger"
+                            aria-expanded="false"
+                            aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbar-blogger">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" expr:href="data:blog.homepageUrl">Beranda</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="">Informasi</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="">Tentang</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div id="header">
+                <header class='container' itemscope='itemscope' itemtype='http://schema.org/WPHeader'>
+                    <!-- Disini lokasi untuk Header judul dan deskripsi Blog -->
+                    <h1><data:blog.title/></h1>
+                </header>
+            </div>
+            <div class="container" id="main">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="card" id="konten">
+                            <div class="card-body">
+                                <div id='main-wrapper' itemprop='mainContentOfPage'>
+                                    <!-- Disini lokasi untuk posting dan komentar dan b:section dibawah ini adalah widget untuk posting dan komentar -->
+                                    <b:section class='main' id='main' showaddelement='no'>
+                                        <b:widget id='Blog1' locked='true' title='Posting Blog' type='Blog'>
+                                            <b:widget-settings>
+                                                <b:widget-setting name='showDateHeader'>false</b:widget-setting>
+                                                <b:widget-setting name='style.textcolor'>#000000</b:widget-setting>
+                                                <b:widget-setting name='showShareButtons'>false</b:widget-setting>
+                                                <b:widget-setting name='showCommentLink'>true</b:widget-setting>
+                                                <b:widget-setting name='style.urlcolor'>#008000</b:widget-setting>
+                                                <b:widget-setting name='showAuthor'>true</b:widget-setting>
+                                                <b:widget-setting name='style.linkcolor'>#0000ff</b:widget-setting>
+                                                <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
+                                                <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
+                                                <b:widget-setting name='showAuthorProfile'>false</b:widget-setting>
+                                                <b:widget-setting name='style.layout'>1x1</b:widget-setting>
+                                                <b:widget-setting name='showLabels'>true</b:widget-setting>
+                                                <b:widget-setting name='showLocation'>false</b:widget-setting>
+                                                <b:widget-setting name='showTimestamp'>false</b:widget-setting>
+                                                <b:widget-setting name='postsPerAd'>1</b:widget-setting>
+                                                <b:widget-setting name='showBacklinks'>false</b:widget-setting>
+                                                <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
+                                                <b:widget-setting name='showInlineAds'>false</b:widget-setting>
+                                                <b:widget-setting name='showReactions'>false</b:widget-setting>
+                                            </b:widget-settings>
+                                        </b:widget>
+                                    </b:section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <aside id='sidebar-wrapper' itemscope='itemscope' itemtype='http://schema.org/WPSideBar'>
+                            <!-- Disini Lokasi sidebar blog yang berisi widget, dan kode b:section dibawah ini adalah kode untuk widget sidebar -->
+                            <b:section class='sidebar' id='sidebar-kanan' showaddelement='yes'>
+                                <b:widget id='PopularPosts1' locked='false' title='Postingan Populer' type='PopularPosts'>
+                                    <b:widget-settings>
+                                        <b:widget-setting name='numItemsToShow'>5</b:widget-setting>
+                                        <b:widget-setting name='showThumbnails'>true</b:widget-setting>
+                                        <b:widget-setting name='showSnippets'>false</b:widget-setting>
+                                        <b:widget-setting name='timeRange'>LAST_MONTH</b:widget-setting>
+                                    </b:widget-settings>
+                                    <b:includable id='main'>
+                                        <b:if cond='data:title != &quot;&quot;'><h2><data:title/></h2></b:if>
+                                        <div class='widget-content popular-posts'>
+                                            <ul>
+                                                <b:loop values='data:posts' var='post'>
+                                                    <li>
+                                                        <b:if cond='!data:showThumbnails'>
+                                                            <b:if cond='!data:showSnippets'>
+                                                                <!-- (1) No snippet/thumbnail -->
+                                                                <a expr:href='data:post.href'><data:post.title/></a>
+                                                                <b:else/>
+                                                                <!-- (2) Show only snippets -->
+                                                                <div class='item-title'><a expr:href='data:post.href'><data:post.title/></a></div>
+                                                                <div class='item-snippet'><data:post.snippet/></div>
+                                                            </b:if>
+                                                            <b:else/>
+                                                            <!-- (3) Show only thumbnails or (4) Snippets and thumbnails. -->
+                                                            <div expr:class='data:showSnippets ? &quot;item-content&quot; : &quot;item-thumbnail-only&quot;'>
+                                                                <b:if cond='data:post.featuredImage.isResizable or data:post.thumbnail'>
+                                                                    <div class='item-thumbnail'>
+                                                                        <a expr:href='data:post.href' target='_blank'>
+                                                                            <b:with value='data:post.featuredImage.isResizable ? resizeImage(data:post.featuredImage, 72, &quot;1:1&quot;) : data:post.thumbnail' var='image'>
+                                                                                <img alt='' border='0' expr:src='data:image'/>
+                                                                            </b:with>
+                                                                        </a>
+                                                                    </div>
+                                                                </b:if>
+                                                                <div class='item-title'><a expr:href='data:post.href'><data:post.title/></a></div>
+                                                                <b:if cond='data:showSnippets'>
+                                                                    <div class='item-snippet'><data:post.snippet/></div>
+                                                                </b:if>
+                                                            </div>
+                                                            <div style='clear: both;'/>
+                                                        </b:if>
+                                                    </li>
+                                                </b:loop>
+                                            </ul>
+                                            <b:include name='quickedit'/>
+                                        </div>
+                                    </b:includable>
+                              </b:widget>
+                            </b:section>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+            <div class='clear'>&#160;</div>
+            <div class='clear'/> <!-- Pembatas dari outer-wrapper -->
+            <footer class='clear' id='site-footer' itemscope='itemscope' itemtype='http://schema.org/WPFooter'>
+                <!-- Disini lokasi footer, bisa di isi widget dan copyright desainer -->
+            </footer>
+        </div> <!-- Akhir dari outer-wrapper -->
+        <script>
+            $("img").each(function(){
+                $(this).addClass('img-thumbnail');
+            });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+    &lt;!--</body>--&gt;&lt;/body&gt;
+</HTML>
