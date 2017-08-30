@@ -10,7 +10,7 @@
             </title>
             <b:else/>
             <b:if cond='data:blog.pageType == &quot;error_page&quot;'>
-                <title>404: Page Not Found ~ <data:blog.title/></title>
+                <title><data:blog.title/></title>
                 <b:else/>
                 <title>
                     <data:blog.pageName/> ~ <data:blog.title/>
@@ -44,7 +44,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"/>
         <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
         &lt;style type=&quot;text/css&quot;&gt;&lt;!-- /* <b:skin><![CDATA[
-<!--        Disini nantinya akan di isi CSS untuk Layout Tata Letak-->
+        <!--css di sini-->
         */]]></b:skin>
         <style type='text/css'>
             #outer-wrapper{
@@ -221,16 +221,13 @@
                 </div>
             </div>
             <div class='clear'>&#160;</div>
-            <div class='clear'/> <!-- Pembatas dari outer-wrapper -->
-            <footer class='clear' id='site-footer' itemscope='itemscope' itemtype='http://schema.org/WPFooter'>
-                <!-- Disini lokasi footer, bisa di isi widget dan copyright desainer -->
+            <div class='clear'/>
+            <footer class='navbar navbar-light bg-light clear' id='site-footer' itemscope='itemscope' itemtype='http://schema.org/WPFooter'>
+                <div class="container">
+                    Copyright Dhany Nurdiansyah | Powered by Blogger
+                </div>
             </footer>
-        </div> <!-- Akhir dari outer-wrapper -->
-        <script>
-            $("img").each(function(){
-                $(this).addClass('img-thumbnail');
-            });
-        </script>
+        </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
     &lt;!--</body>--&gt;&lt;/body&gt;
