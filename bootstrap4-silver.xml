@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<HTML expr:class='data:blog.languageDirection + &quot; no-js rwd&quot;' expr:dir='data:blog.languageDirection'>
+    <head>
+        <meta charset='utf-8'/>
+        <b:if cond='data:blog.url == data:blog.homepageUrl'><link href='https://plus.google.com/ID_G-pluss' rel='author'/></b:if>
+        <b:if cond='data:blog.pageType == &quot;index&quot;'>
+            <title>
+                <data:blog.pageTitle/>
+            </title>
+            <b:else/>
+            <b:if cond='data:blog.pageType == &quot;error_page&quot;'>
+                <title>404: Page Not Found ~ <data:blog.title/></title>
+                <b:else/>
+                <title>
+                    <data:blog.pageName/> ~ <data:blog.title/>
+                </title>
+            </b:if>
+        </b:if>
+        <meta content='width=device-width, initial-scale=1, maximum-scale=1' name='viewport'/>
+        <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+        <meta content='blogger' name='generator'/>
+        <link expr:href='data:blog.homepageUrl + &quot;favicon.ico&quot;' rel='icon' type='image/x-icon'/>
+        <link expr:href='data:blog.url' rel='canonical'/>
+        <link expr:href='data:blog.homepageUrl + &quot;feeds/posts/default&quot;' expr:title='data:blog.title + &quot; - Atom&quot;' rel='alternate' type='application/atom+xml'/>
+        <link expr:href='data:blog.homepageUrl + &quot;feeds/posts/default?alt=rss&quot;' expr:title='data:blog.title + &quot; - RSS&quot;' rel='alternate' type='application/rss+xml'/>
+        <link expr:href='&quot;http://www.blogger.com/feeds/&quot; + data:blog.blogId + &quot;/posts/default&quot;' expr:title='data:blog.title + &quot; - Atom&quot;' rel='alternate' type='application/atom+xml'/>
+        <link href='http://www.blogger.com/openid-server.g' rel='openid.server'/>
+        <link expr:href='data:blog.homepageUrl' rel='openid.delegate'/>
+        <b:if cond='data:blog.pageType == &quot;item&quot;'>
+            <b:if cond='data:blog.postImageThumbnailUrl'>
+                <link expr:href='data:blog.postImageThumbnailUrl' rel='image_src'/>
+            </b:if>
+            <b:if cond='data:blog.metaDescription != &quot;&quot;'>
+                <meta expr:content='data:blog.metaDescription' name='description'/>
+                <b:else/>
+                <meta expr:content='data:blog.pageName + &quot; - &quot; + data:blog.title' name='description'/>
+            </b:if>
+        </b:if>
+        <b:if cond='data:blog.url == data:blog.homepageUrl'>
+            <meta content='Deskripsi - Blog' name='description'/>
+            <meta content='Keyword blog' name='keywords'/>
+        </b:if>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"/>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        &lt;style type=&quot;text/css&quot;&gt;&lt;!-- /* <b:skin><![CDATA[
+<!--        Disini nantinya akan di isi CSS untuk Layout Tata Letak-->
+        */]]></b:skin>
+        <style type='text/css'>
+            #outer-wrapper{
+                background: #ecf0f1;
+            }
+            #header{
+                background: #95a5a6;
+                height: 150px;
+            }
+            #header h1{
+                line-height: 150px;
+            }
+        </style>
+    </head>
+    <body expr:class='data:blog.pageType' itemscope='itemscope' itemtype='http://schema.org/WebPage'>
+        <div id='outer-wrapper'>
+            <!-- Disini posisi elemen outer-wrapper -->
+            <nav class="navbar navbar-expand-md navbar-light bg-light">
+                <div class="container">
+                    <button
+                            class="navbar-toggler"
+                            type="button"
+                            data-toggle="collapse"
+                            data-target="#navbar-blogger"
+                            aria-controls="navbar-blogger"
+                            aria-expanded="false"
+                            aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbar-blogger">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="">Beranda</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="">Informasi</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="">Tentang</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div id="header">
+                <header class='container' itemscope='itemscope' itemtype='http://schema.org/WPHeader'>
+                    <!-- Disini lokasi untuk Header judul dan deskripsi Blog -->
+                    <h1><data:blog.title/></h1>
+                </header>
+            </div>
+            <div id='main-wrapper' itemprop='mainContentOfPage'>
+                <!-- Disini lokasi untuk posting dan komentar dan b:section dibawah ini adalah widget untuk posting dan komentar -->
+                <b:section class='main' id='main' showaddelement='no'>
+                    <b:widget id='Blog1' locked='true' title='Posting Blog' type='Blog'/>
+                </b:section>
+            </div>
+            <aside id='sidebar-wrapper' itemscope='itemscope' itemtype='http://schema.org/WPSideBar'>
+                <!-- Disini Lokasi sidebar blog yang berisi widget, dan kode b:section dibawah ini adalah kode untuk widget sidebar -->
+                <b:section class='sidebar' id='sidebar-kanan' showaddelement='yes'>
+                </b:section>
+            </aside>
+            <div class='clear'>&#160;</div>
+            <div class='clear'/> <!-- Pembatas dari outer-wrapper -->
+            <footer class='clear' id='site-footer' itemscope='itemscope' itemtype='http://schema.org/WPFooter'>
+                <!-- Disini lokasi footer, bisa di isi widget dan copyright desainer -->
+            </footer>
+        </div> <!-- Akhir dari outer-wrapper -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+    &lt;!--</body>--&gt;&lt;/body&gt;
+</HTML>
