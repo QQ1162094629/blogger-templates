@@ -137,7 +137,7 @@
                                     <b:section class='main' id='main' showaddelement='no'>
                                         <b:widget id='Blog1' locked='true' title='Posting Blog' type='Blog'>
                                             <b:widget-settings>
-                                                <b:widget-setting name='showDateHeader'>true</b:widget-setting>
+                                                <b:widget-setting name='showDateHeader'>false</b:widget-setting>
                                                 <b:widget-setting name='style.textcolor'>#000000</b:widget-setting>
                                                 <b:widget-setting name='showShareButtons'>false</b:widget-setting>
                                                 <b:widget-setting name='showCommentLink'>true</b:widget-setting>
@@ -208,7 +208,7 @@
               <!--auto readmore-->
               <b:if cond='data:blog.pageType != &quot;static_page&quot; or data:blog.pageType != &quot;item&quot;'>
                   <div class="row">
-                      <div class="col-6">
+                      <div class="col-md-6">
                           <b:if cond='data:post.firstImageUrl'>
                               <a expr:href='data:post.url'>
                                   <img class='post-thumbnail' alt='thumbnail' expr:src='data:post.firstImageUrl'/>
@@ -219,7 +219,7 @@
                               </a>
                           </b:if>
                       </div>
-                      <div class="col-6">
+                      <div class="col-md-6">
                         <data:post.snippet/>
                         <b:if cond='data:post.hasJumpLink'>
                           <div class='jump-link'>
@@ -325,7 +325,7 @@
       <!--auto readmore-->
       <b:if cond='data:blog.pageType != &quot;static_page&quot; or data:blog.pageType != &quot;item&quot;'>
         <div class="row">
-            <div class="col-6">
+            <div class="col-md-6">
                 <b:if cond='data:post.firstImageUrl'>
                     <a expr:href='data:post.url'>
                         <img class='post-thumbnail' alt='thumbnail' expr:src='data:post.firstImageUrl'/>
@@ -336,7 +336,7 @@
                     </a>
                 </b:if>
             </div>
-            <div class="col-6">
+            <div class="col-md-6">
                 <data:post.snippet/>
                 <b:if cond='data:post.hasJumpLink'>
                   <div class='jump-link'>
