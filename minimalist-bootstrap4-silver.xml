@@ -225,28 +225,30 @@
           </div>
           <div class='post-body entry-content' expr:id='&quot;post-body-&quot; + data:post.id' itemprop='articleBody'>
               <!--auto readmore-->
-              <b:if cond='data:blog.pageType != &quot;static_page&quot; or data:blog.pageType != &quot;item&quot;'>
-                  <div class="row">
-                      <div class="col-md-6">
-                          <b:if cond='data:post.firstImageUrl'>
-                              <a expr:href='data:post.url'>
-                                  <img class='post-thumbnail' alt='thumbnail' expr:src='data:post.firstImageUrl'/>
-                              </a>
-                              <b:else/>
-                              <a expr:href='data:post.url'>
-                                  <img class='post-thumbnail' alt='thumbnail' src='http://dhanyn10.github.io/data/noimage.gif'/>
-                              </a>
-                          </b:if>
-                      </div>
-                      <div class="col-md-6">
-                        <data:post.snippet/>
-                        <b:if cond='data:post.hasJumpLink'>
-                          <div class='jump-link'>
-                            <a expr:href='data:post.url + &quot;#more&quot;' expr:title='data:post.title'><data:post.jumpText/></a>
+              <b:if cond='data:blog.pageType != &quot;static_page&quot;'>
+                  <b:if cond='data:blog.pageType != &quot;item&quot;'>
+                      <div class="row">
+                          <div class="col-md-6">
+                              <b:if cond='data:post.firstImageUrl'>
+                                  <a expr:href='data:post.url'>
+                                      <img class='post-thumbnail' alt='thumbnail' expr:src='data:post.firstImageUrl'/>
+                                  </a>
+                                  <b:else/>
+                                  <a expr:href='data:post.url'>
+                                      <img class='post-thumbnail' alt='thumbnail' src='http://dhanyn10.github.io/data/noimage.gif'/>
+                                  </a>
+                              </b:if>
                           </div>
-                        </b:if>
+                          <div class="col-md-6">
+                            <data:post.snippet/>
+                            <b:if cond='data:post.hasJumpLink'>
+                              <div class='jump-link'>
+                                <a expr:href='data:post.url + &quot;#more&quot;' expr:title='data:post.title'><data:post.jumpText/></a>
+                              </div>
+                            </b:if>
+                          </div>
                       </div>
-                  </div>
+                  </b:if>
               </b:if>
               <b:if cond='data:blog.pageType == &quot;item&quot;'>
                   <data:post.body/>
@@ -342,28 +344,30 @@
     <!-- Then use the post body as the schema.org description, for good G+/FB snippeting. -->
     <div class='post-body entry-content' expr:id='&quot;post-body-&quot; + data:post.id' expr:itemprop='(data:blog.metaDescription ? &quot;&quot; : &quot;description &quot;) + &quot;articleBody&quot;'>
       <!--auto readmore-->
-      <b:if cond='data:blog.pageType != &quot;static_page&quot; or data:blog.pageType != &quot;item&quot;'>
-        <div class="row">
-            <div class="col-md-6">
-                <b:if cond='data:post.firstImageUrl'>
-                    <a expr:href='data:post.url'>
-                        <img class='post-thumbnail' alt='thumbnail' expr:src='data:post.firstImageUrl'/>
-                    </a>
-                    <b:else/>
-                    <a expr:href='data:post.url'>
-                        <img class='post-thumbnail' alt='thumbnail' src='http://dhanyn10.github.io/data/noimage.gif'/>
-                    </a>
-                </b:if>
-            </div>
-            <div class="col-md-6">
-                <data:post.snippet/>
-                <b:if cond='data:post.hasJumpLink'>
-                  <div class='jump-link'>
-                    <a expr:href='data:post.url + &quot;#more&quot;' expr:title='data:post.title'><data:post.jumpText/></a>
+      <b:if cond='data:blog.pageType != &quot;static_page&quot;'>
+          <b:if cond='data:blog.pageType != &quot;item&quot;'>
+              <div class="row">
+                  <div class="col-md-6">
+                      <b:if cond='data:post.firstImageUrl'>
+                          <a expr:href='data:post.url'>
+                              <img class='post-thumbnail' alt='thumbnail' expr:src='data:post.firstImageUrl'/>
+                          </a>
+                          <b:else/>
+                          <a expr:href='data:post.url'>
+                              <img class='post-thumbnail' alt='thumbnail' src='http://dhanyn10.github.io/data/noimage.gif'/>
+                          </a>
+                      </b:if>
                   </div>
-                </b:if>
-            </div>
-        </div>
+                  <div class="col-md-6">
+                    <data:post.snippet/>
+                    <b:if cond='data:post.hasJumpLink'>
+                      <div class='jump-link'>
+                        <a expr:href='data:post.url + &quot;#more&quot;' expr:title='data:post.title'><data:post.jumpText/></a>
+                      </div>
+                    </b:if>
+                  </div>
+              </div>
+          </b:if>
       </b:if>
       <b:if cond='data:blog.pageType == &quot;item&quot;'>
           <data:post.body/>
