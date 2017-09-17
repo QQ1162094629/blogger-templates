@@ -137,7 +137,7 @@
                                     <b:section class='main' id='main' showaddelement='no'>
                                         <b:widget id='Blog1' locked='true' title='Posting Blog' type='Blog'>
                                             <b:widget-settings>
-                                                <b:widget-setting name='showDateHeader'>false</b:widget-setting>
+                                                <b:widget-setting name='showDateHeader'>true</b:widget-setting>
                                                 <b:widget-setting name='style.textcolor'>#000000</b:widget-setting>
                                                 <b:widget-setting name='showShareButtons'>false</b:widget-setting>
                                                 <b:widget-setting name='showCommentLink'>true</b:widget-setting>
@@ -160,7 +160,7 @@
                                             <b:includable id='mobile-post' var='post'>
   <div class='date-outer'>
     <b:if cond='data:post.dateHeader'>
-      <h2 class='date-header'><span><data:post.dateHeader/></span></h2>
+        <h2 class='date-header'><span><data:post.dateHeader/></span></h2>
     </b:if>
     <div class='date-posts'>
       <div class='post-outer'>
@@ -207,17 +207,26 @@
           <div class='post-body entry-content' expr:id='&quot;post-body-&quot; + data:post.id' itemprop='articleBody'>
               <!--auto readmore-->
               <b:if cond='data:blog.pageType != &quot;static_page&quot; or data:blog.pageType != &quot;item&quot;'>
-                  <b:if cond='data:post.thumbnailUrl'>
-                      <a expr:href='data:post.url'>
-                          <img class='post-thumbnail' alt='thumbnail' expr:src='data:post.thumbnailUrl'/>
-                      </a>
-                      <b:else/>
-                      <a expr:href='data:post.url'>
-                          <img class='post-thumbnail' alt='thumbnail' src='http://dhanyn10.github.io/data/noimage.gif'/>
-                      </a>
-                  </b:if>
-                  <div class='post-snippet'>
-                      <data:post.snippet/>
+                  <div class="row">
+                      <div class="col-6">
+                          <b:if cond='data:post.firstImageUrl'>
+                              <a expr:href='data:post.url'>
+                                  <img class='post-thumbnail' alt='thumbnail' expr:src='data:post.firstImageUrl'/>
+                              </a>
+                              <b:else/>
+                              <a expr:href='data:post.url'>
+                                  <img class='post-thumbnail' alt='thumbnail' src='http://dhanyn10.github.io/data/noimage.gif'/>
+                              </a>
+                          </b:if>
+                      </div>
+                      <div class="col-6">
+                        <data:post.snippet/>
+                        <b:if cond='data:post.hasJumpLink'>
+                          <div class='jump-link'>
+                            <a expr:href='data:post.url + &quot;#more&quot;' expr:title='data:post.title'><data:post.jumpText/></a>
+                          </div>
+                        </b:if>
+                      </div>
                   </div>
               </b:if>
               <b:if cond='data:blog.pageType == &quot;item&quot;'>
@@ -315,18 +324,27 @@
     <div class='post-body entry-content' expr:id='&quot;post-body-&quot; + data:post.id' expr:itemprop='(data:blog.metaDescription ? &quot;&quot; : &quot;description &quot;) + &quot;articleBody&quot;'>
       <!--auto readmore-->
       <b:if cond='data:blog.pageType != &quot;static_page&quot; or data:blog.pageType != &quot;item&quot;'>
-          <b:if cond='data:post.thumbnailUrl'>
-              <a expr:href='data:post.url'>
-                  <img class='post-thumbnail' alt='thumbnail' expr:src='data:post.thumbnailUrl'/>
-              </a>
-              <b:else/>
-              <a expr:href='data:post.url'>
-                  <img class='post-thumbnail' alt='thumbnail' src='http://dhanyn10.github.io/data/noimage.gif'/>
-              </a>
-          </b:if>
-          <div class='post-snippet'>
-              <data:post.snippet/>
-          </div>
+        <div class="row">
+            <div class="col-6">
+                <b:if cond='data:post.firstImageUrl'>
+                    <a expr:href='data:post.url'>
+                        <img class='post-thumbnail' alt='thumbnail' expr:src='data:post.firstImageUrl'/>
+                    </a>
+                    <b:else/>
+                    <a expr:href='data:post.url'>
+                        <img class='post-thumbnail' alt='thumbnail' src='http://dhanyn10.github.io/data/noimage.gif'/>
+                    </a>
+                </b:if>
+            </div>
+            <div class="col-6">
+                <data:post.snippet/>
+                <b:if cond='data:post.hasJumpLink'>
+                  <div class='jump-link'>
+                    <a expr:href='data:post.url + &quot;#more&quot;' expr:title='data:post.title'><data:post.jumpText/></a>
+                  </div>
+                </b:if>
+            </div>
+        </div>
       </b:if>
       <b:if cond='data:blog.pageType == &quot;item&quot;'>
           <data:post.body/>
@@ -337,11 +355,6 @@
       <!--auto readmore-->
       <div style='clear: both;'/> <!-- clear for photos floats -->
     </div>
-    <b:if cond='data:post.hasJumpLink'>
-      <div class='jump-link'>
-        <a expr:href='data:post.url + &quot;#more&quot;' expr:title='data:post.title'><data:post.jumpText/></a>
-      </div>
-    </b:if>
     <div class='post-footer'>
     <div class='post-footer-line post-footer-line-1'>
         <span class='post-timestamp'>
