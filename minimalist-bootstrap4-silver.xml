@@ -41,6 +41,25 @@
             <meta content='Deskripsi - Blog' name='description'/>
             <meta content='Keyword blog' name='keywords'/>
         </b:if>
+        <meta content='deskripsi' name='description'/>
+        <meta content='Keywords' name='keywords'/>
+        <meta content='index, follow' name='robots'/>
+        <meta content='code verifikasi' name='google-site-verification'/>
+        <meta content='code verifikasi' name='google-site-verification'/>
+        <meta content='verifikasi ms' name='msvalidate.01'/>
+        <meta content='general' name='rating'/>
+        <meta content='id' name='geo.country'/>
+        <meta content='Indonesia' name='geo.placename'/>
+        <meta content='anonym' name='author'/>
+        <meta content='all' name='Slurp'/>
+        <link href='example.com/favicon.ico' rel='icon' type='image/x-icon'/>
+        <link href='example.com/atom.xml' rel='alternate' title='Atom' type='application/atom+xml'/>
+        <link href='example.com/feeds/posts/default' rel='alternate' title='RSS Feeds' type='application/atom+xml'/>
+        <link href='http://draft.blogger.com/openid-server.g' rel='openid.server'/>
+        <link href='example.com' rel='openid.delegate'/>
+        <meta expr:content='data:blog.pageTitle' property='og:title'/>
+        <meta content='website' property='og:type'/>
+        <meta expr:content='data:blog.canonicalUrl' property='og:url'/>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"/>
         <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
         &lt;style type=&quot;text/css&quot;&gt;&lt;!-- /* <b:skin><![CDATA[
